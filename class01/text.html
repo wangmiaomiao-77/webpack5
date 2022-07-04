@@ -1,0 +1,26 @@
+<!--
+ * @Description: 
+ * @Date: 2022-06-22 10:11:02
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    
+    <!-- <script src="./01.js"></script> -->
+    <!--  直接引用报错，不支持export模块化 -->
+    <!-- <script>
+        import add from './01.js';
+        console.log(add(4,5));
+    </script> -->
+    <script type="module">
+        import add from './01.js';
+        console.log(add(4,5));
+    </script>
+</body>
+</html>
