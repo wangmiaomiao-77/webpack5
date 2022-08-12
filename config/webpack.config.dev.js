@@ -13,8 +13,8 @@ module.exports = {
     devtool: 'cheap-module-source-map', // 可以指向源文件,多生成map文件，不存在列数，比source-map打包体积小,并且在引用babel等资源打包后不会导致识别错误行数
     devServer: {
         // static: './build', 
-        static: path.join(__dirname,'./build'), // 直接访问http://localhost:3000/页面404，http://localhost:3000/app.html可正常访问，static是根据内存中地址来的，不是打包后的项目地址
-        compress:true, // 是否压缩 服务器传输到浏览器中代码压缩 http响应头中增加Content-Encoding: gzip
+        static: path.resolve(__dirname,'../build'), // 直接访问http://localhost:3000/页面404，http://localhost:3000/app.html可正常访问，static是根据内存中地址来的，不是打包后的项目地址
+        compress:true, // 是否压缩 服务器传输到浏览器中代码压缩 http响应头中增加 Content-Encoding: gzip
         port: 3000, // 设置端口号
         headers:{ // response header增加请求头
             'X-Access-Token': 123
@@ -24,6 +24,7 @@ module.exports = {
             '/api': 'http://localhost:9000'
         },
         https: true,
-        historyApiFallback: true
+        historyApiFallback: true, // 设置路由未找到404报错问题
+        host:'0.0.0.0', // 设置共享可访问本地地址资源
     },
 }

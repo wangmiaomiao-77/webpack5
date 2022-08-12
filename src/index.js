@@ -53,8 +53,7 @@ button.addEventListener('click',()=>{
 document.body.appendChild(button);
 
 
-fetch('/api/hello').then(res=>{
-    res.text()
-}).then(result=>{
+fetch('/api/hello')
+.then(response=> response.text()).then(result=>{
     console.log(result,'fetch');
 })
