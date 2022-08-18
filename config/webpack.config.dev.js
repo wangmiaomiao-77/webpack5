@@ -23,8 +23,10 @@ module.exports = {
         proxy:{
             '/api': 'http://localhost:9000'
         },
-        https: true,
+        https: false,
         historyApiFallback: true, // 设置路由未找到404报错问题
         host:'0.0.0.0', // 设置共享可访问本地地址资源
+        hot: true, // 热替换
+        // liveReload: true, // 热加载
     },
 }

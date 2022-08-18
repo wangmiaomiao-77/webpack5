@@ -5,8 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>webpack5-进阶</title>
+    <style>
+        .container{
+            border: 1px solid #f0f0f0;
+            width: 640px;
+            display: grid;
+            /* gap: 30px 20px; */
+            /* grid-template-columns: repeat(3,33.33%); */
+            /* grid-template-columns: repeat(auto-fill, 33%); */
+            grid-template-columns: 200px 1fr 2fr;
+        }
+        .item{
+            width: 200px;
+            height: 200px;
+            background:paleturquoise;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
 </body>
 </html>

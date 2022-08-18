@@ -52,8 +52,18 @@ button.addEventListener('click',()=>{
 })
 document.body.appendChild(button);
 
-
+// 跨域请求
 fetch('/api/hello')
 .then(response=> response.text()).then(result=>{
     console.log(result,'fetch');
 })
+
+// 热替换 热加载
+const buttons = document.createElement('button');
+buttons.textContent = '添加';
+buttons.addEventListener('click',()=>{
+    let blockSq = document.createElement('div');
+    blockSq.classList.add('square');
+    document.body.appendChild(blockSq);
+})
+document.body.appendChild(buttons);
